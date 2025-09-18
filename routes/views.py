@@ -759,3 +759,12 @@ def test_db(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 
+@api_view(['GET'])
+def health_check(request):
+    """Simple health check endpoint for keep-alive pings"""
+    return Response({
+        'status': 'healthy',
+        'timestamp': timezone.now().isoformat(),
+        'message': 'Service is running'
+    })
+

@@ -33,5 +33,6 @@ urlpatterns = [
     path('update-client/<int:pk>/', views.update_client, name='update_client'),
     path('delete-client/<int:pk>/', views.delete_client, name='delete_client'),
     path('update-guard/<int:pk>/', views.update_guard, name='update_guard'),
+    path('health/', views.health_check, name='health_check'),
 ]
 
