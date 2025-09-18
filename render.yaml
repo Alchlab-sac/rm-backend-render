@@ -26,10 +26,6 @@ services:
           property: connectionString
       # CORS is set to allow all origins for Capacitor.js frontend
       # No additional CORS_ORIGINS needed since CORS_ALLOW_ALL_ORIGINS = True
-    disk:
-      name: route-monitor-disk
-      mountPath: /opt/render/project/src
-      sizeGB: 1
 
 databases:
   - name: route-monitor-db
