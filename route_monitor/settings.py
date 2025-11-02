@@ -149,7 +149,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'route_monitor.wsgi.application'
 
 # Database
-# Use DATABASE_URL if available (Render PostgreSQL), otherwise fallback to SQLite for local development
+# Use DATABASE_URL if available (production PostgreSQL), otherwise fallback to SQLite for local development
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
     DATABASES = {

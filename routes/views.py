@@ -761,7 +761,7 @@ def test_db(request):
 
 @api_view(['GET'])
 def health_check(request):
-    """Simple health check endpoint for keep-alive pings"""
+    """Simple health check endpoint for monitoring"""
     return Response({
         'status': 'healthy',
         'timestamp': timezone.now().isoformat(),
